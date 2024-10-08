@@ -18,7 +18,7 @@ class CheckRole
     {
 
         if (Auth::user()->role != 'cashier') {
-            return redirect('dashboard');
+            return redirect('customers.index');
         }
         return $next($request);
     }
